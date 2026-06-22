@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# test results (Playwright)
+test-results/
+playwright-report/
+blob-report/
+
+# coverage
+coverage/
+
+# logs
+*.log
+
+# env
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
