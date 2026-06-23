@@ -1,34 +1,14 @@
 {
   "customers": [
     {
-      "id": "1",
-      "fullName": "Nguyễn Văn An",
-      "phone": "0912345678",
-      "email": "an@example.com",
-      "course": "Lập trình Web",
-      "status": "new",
-      "isFavorite": false,
-      "note": "Muốn học buổi tối"
-    },
-    {
-      "id": "2",
-      "fullName": "Trần Thị Bình",
-      "phone": "0987654321",
-      "email": "binh@example.com",
-      "course": "Kiểm thử phần mềm",
-      "status": "contacted",
-      "isFavorite": true,
-      "note": "Đã gọi tư vấn lần 1"
-    },
-    {
-      "id": "3",
       "fullName": "Lê Minh Cường",
       "phone": "0909123456",
       "email": "cuong@gmail.com",
       "course": "JavaScript cơ bản",
-      "status": "registered",
-      "isFavorite": false,
-      "note": "Đã đăng ký học cuối tuần"
+      "status": "contacted",
+      "isFavorite": true,
+      "note": "Đã đăng ký học cuối tuần",
+      "id": "3"
     },
     {
       "fullName": "Anna Smith T",
@@ -36,7 +16,7 @@
       "email": "anna@gmail.com",
       "course": "java",
       "status": "new",
-      "favorite": true,
+      "isFavorite": true,
       "note": "aâ",
       "id": "w7HSoXv"
     },
@@ -45,8 +25,8 @@
       "phone": "0766938732",
       "email": "quangglee0000@gmail.com",
       "course": "tester",
-      "status": "contacted",
-      "favorite": true,
+      "status": "registered",
+      "isFavorite": false,
       "note": "sssss",
       "id": "7rrwe7a"
     },
@@ -59,6 +39,16 @@
       "favorite": true,
       "note": "sss",
       "id": "2LB01IM"
+    },
+    {
+      "fullName": "Lê Minh Cường",
+      "phone": "0909123456",
+      "email": "cuong@gmail.com",
+      "course": "JavaScript cơ bản",
+      "status": "new",
+      "isFavorite": false,
+      "note": "",
+      "id": "_eBPeCb"
     }
   ]
 }

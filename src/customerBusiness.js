@@ -39,3 +39,56 @@ export function validateCustomerForm(formData) {
     errors,
   };
 }
+
+function getBasePayload(formData) {
+  return {
+    fullName: String(formData.fullName ?? "").trim(),
+    phone: String(formData.phone ?? "").trim(),
+    email: String(formData.email ?? "").trim(),
+    course: String(formData.course ?? "").trim(),
+    note: String(formData.note ?? "").trim(),
+  };
+}
+
+export function createCustomerPayload(formData) {
+  return {
+    ...getBasePayload(formData),
+    status: "new",
+    isFavorite: false,
+  };
+}
+
+export function updateCustomerPayload(formData) {
+  return {
+    ...getBasePayload(formData),
+    status: String(formData.status ?? "new").trim(),
+    isFavorite: Boolean(formData.isFavorite), // Ép kiểu Boolean cho an toàn
+  };
+}
+
+export function filterCustomers(customers, filterType = "all") {
+  if (filterType === "all") {
+    return customers;
+  }
+
+  if (filterType === "favorite") {
+    return customers.filter((customer) => customer.isFavorite === true);
+  }
+
+  return customers.filter((customer) => customer.status === filterType);
+}
+
+export function searchCustomers(customers, keyword = "") {
+  const q = String(keyword).trim().toLowerCase();
+
+  if (!q) {
+    return customers;
+  }
+
+  return customers.filter((customer) => {
+    return [customer.fullName, customer.phone, customer.email, customer.course]
+      .join(" ")
+      .toLowerCase()
+      .includes(q);
+  });
+}

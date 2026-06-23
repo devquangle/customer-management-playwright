@@ -35,14 +35,20 @@ export function updateCustomer(id, customer) {
   });
 }
 
-// ĐÃ SỬA: Xóa bỏ body: JSON.stringify(customer) vì phương thức GET không cần body
+export function patchCustomerStatus(id, status) {
+  return request(`/customers/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ status })
+  });
+}
+
 export function getCustomer(id) {
   return request(`/customers/${id}`, {
     method: "GET",
   });
 }
 
-// BỔ SUNG: Hàm xóa khách hàng phục vụ cho nút "Xóa" trên UI
+
 export function deleteCustomer(id) {
   return request(`/customers/${id}`, {
     method: "DELETE",

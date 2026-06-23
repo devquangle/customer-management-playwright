@@ -9,12 +9,14 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+
   <body class="bg-light">
     <div class="container py-4">
       <div class="text-center mb-4">
         <h2 class="fw-bold">Quản lý khách hàng quan tâm khóa học</h2>
         <p class="text-muted small">
-          Ứng dụng HTML, CSS, JavaScript thuần dùng JSON Server làm REST API local.
+          Ứng dụng HTML, CSS, JavaScript thuần dùng JSON Server làm REST API
+          local.
         </p>
       </div>
 
@@ -23,7 +25,7 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <small class="text-muted">Khách mới</small>
-              <h4>1</h4>
+              <h4 id="stat-new">0</h4>
             </div>
           </div>
         </div>
@@ -32,7 +34,7 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <small class="text-muted">Đã tư vấn</small>
-              <h4>1</h4>
+              <h4 id="stat-contacted">0</h4>
             </div>
           </div>
         </div>
@@ -41,16 +43,19 @@
           <div class="card shadow-sm">
             <div class="card-body">
               <small class="text-muted">Đã đăng ký</small>
-              <h4>1</h4>
+              <h4 id="stat-registered">0</h4>
             </div>
           </div>
         </div>
       </div>
 
       <div class="card shadow-sm">
-        <div class="card-header d-flex justify-content-between align-items-center">
+        <div
+          class="card-header d-flex justify-content-between align-items-center"
+        >
           <div class="w-75">
             <input
+              id="searchInput"
               class="form-control"
               placeholder="Tìm theo họ tên, số điện thoại, email..."
             />
@@ -67,12 +72,31 @@
           </div>
         </div>
         <div class="card-body">
-          <div class="mb-3">
-            <button class="btn btn-primary btn-sm">Tất cả</button>
-            <button class="btn btn-outline-secondary btn-sm">Khách mới</button>
-            <button class="btn btn-outline-warning btn-sm">Đã tư vấn</button>
-            <button class="btn btn-outline-success btn-sm">Đã đăng ký</button>
-            <button class="btn btn-outline-danger btn-sm">Yêu thích</button>
+          <div class="mb-3" id="filterButtonGroup">
+            <button class="btn btn-primary btn-sm" data-filter="all">
+              Tất cả
+            </button>
+            <button class="btn btn-outline-secondary btn-sm" data-filter="new">
+              Khách mới
+            </button>
+            <button
+              class="btn btn-outline-warning btn-sm"
+              data-filter="contacted"
+            >
+              Đã tư vấn
+            </button>
+            <button
+              class="btn btn-outline-success btn-sm"
+              data-filter="registered"
+            >
+              Đã đăng ký
+            </button>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              data-filter="favorite"
+            >
+              Yêu thích
+            </button>
           </div>
 
           <p class="text-muted" id="count">Tổng số đang hiển thị: 0</p>
@@ -91,15 +115,19 @@
                 </tr>
               </thead>
 
-              <tbody id="customerTableBody">
-                </tbody>
+              <tbody id="customerTableBody"></tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal fade" id="customerModalAdd" tabindex="-1" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="customerModalAdd"
+      tabindex="-1"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <form id="customerFormAdd" onsubmit="event.preventDefault()">
@@ -147,15 +175,32 @@
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-              <button type="button" class="btn btn-primary" id="btn-save-customer">Lưu</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Hủy
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btn-save-customer"
+              >
+                Lưu
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
 
-    <div class="modal fade" id="customerModalUpdate" tabindex="-1" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="customerModalUpdate"
+      tabindex="-1"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <form id="customerFormUpdate" onsubmit="event.preventDefault()">
@@ -196,6 +241,31 @@
                   <div id="course-error" class="invalid-feedback"></div>
                 </div>
 
+                <div class="col-md-6 d-none">
+                  <label class="form-label">Trạng thái</label>
+                  <select id="status" class="form-select">
+                    <option value="new">Khách mới</option>
+                    <option value="contacted">Đã tư vấn</option>
+                    <option value="registered">Đã đăng ký</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-end">
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="isFavorite"
+                    />
+                    <label
+                      class="form-check-label fw-bold text-danger"
+                      for="isFavorite"
+                    >
+                      ❤️ Khách hàng yêu thích
+                    </label>
+                  </div>
+                </div>
+
                 <div class="col-12">
                   <label class="form-label">Ghi chú</label>
                   <textarea id="note" class="form-control"></textarea>
@@ -204,10 +274,132 @@
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-              <button type="button" class="btn btn-primary" id="btn-update-customer">Cập nhật</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Hủy
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btn-update-customer"
+              >
+                Cập nhật
+              </button>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="customerModalDelete"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">Xác nhận xóa khách hàng</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="deleteCustomerId" value="" />
+            <p>Bạn có chắc chắn muốn xóa khách hàng sau không?</p>
+            <div class="alert alert-warning">
+              <div>
+                <strong>Họ tên:</strong>
+                <span id="deleteCustomerName">---</span>
+              </div>
+              <div>
+                <strong>Số điện thoại:</strong>
+                <span id="deleteCustomerPhone">---</span>
+              </div>
+            </div>
+            <p class="text-danger small mb-0">
+              * Hành động này không thể hoàn tác.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Hủy
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="btn-confirm-delete"
+            >
+              Xóa ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="customerModalStatus"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" id="modal-status-header">
+            <h5 class="modal-title" id="modal-status-title">Xác nhận</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="statusCustomerId" />
+            <input type="hidden" id="targetStatus" />
+            <p id="modal-status-message">
+              Bạn có chắc chắn muốn thay đổi trạng thái khách hàng?
+            </p>
+            <div class="alert alert-warning">
+              <div>
+                <strong>Họ tên:</strong>
+                <span id="statusCustomerName">---</span>
+              </div>
+              <div>
+                <strong>Số điện thoại:</strong>
+                <span id="statusCustomerPhone">---</span>
+              </div>
+            </div>
+            <p class="text-danger small mb-0">
+              * Hành động này không thể hoàn tác.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Hủy
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btn-confirm-status"
+            >
+              Xác nhận
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -217,49 +409,162 @@
         fetchCustomers,
         createCustomer,
         getCustomer,
+        updateCustomer,
+        deleteCustomer,
+        patchCustomerStatus,
       } from "./src/customerApiStore.js";
-      import { validateCustomerForm } from "./src/customerBusiness.js";
+      import {
+        validateCustomerForm,
+        createCustomerPayload,
+        updateCustomerPayload,
+        filterCustomers,
+        searchCustomers,
+      } from "./src/customerBusiness.js";
 
-      const customerModalAdd = new bootstrap.Modal(document.getElementById("customerModalAdd"));
-      const customerModalUpdate = new bootstrap.Modal(document.getElementById("customerModalUpdate"));
+      function updateCustomerPayload(formData) {
+        return {
+          fullName: String(formData.fullName ?? "").trim(),
+          phone: String(formData.phone ?? "").trim(),
+          email: String(formData.email ?? "").trim(),
+          course: String(formData.course ?? "").trim(),
+          status: String(formData.status ?? "new").trim(),
+          isFavorite: Boolean(formData.isFavorite),
+          note: String(formData.note ?? "").trim(),
+        };
+      }
+
+      let customers = [];
+      let currentFilter = "all";
+      let currentKeyword = "";
+
+      const customerModalAdd = new bootstrap.Modal(
+        document.getElementById("customerModalAdd"),
+      );
+      const customerModalUpdate = new bootstrap.Modal(
+        document.getElementById("customerModalUpdate"),
+      );
+      const customerModalDelete = new bootstrap.Modal(
+        document.getElementById("customerModalDelete"),
+      );
+      const customerModalStatus = new bootstrap.Modal(
+        document.getElementById("customerModalStatus"),
+      );
 
       async function loadCustomers() {
-        const data = await fetchCustomers();
+        try {
+          customers = await fetchCustomers();
+          renderCustomers();
+        } catch (error) {
+          console.error("Lỗi khi tải danh sách khách hàng:", error);
+        }
+      }
+
+      function renderCustomers() {
+        let processedData = filterCustomers(customers, currentFilter);
+        processedData = searchCustomers(processedData, currentKeyword);
+        renderTable(processedData);
+        updateDashboard();
+      }
+
+      function renderTable(data) {
         const tbody = document.getElementById("customerTableBody");
         const count = document.getElementById("count");
-        
+
         if (!data || data.length === 0) {
           tbody.innerHTML = `
             <tr>
-              <td colspan="7" class="text-center">Không có khách hàng</td>
+              <td colspan="7" class="text-center">Không có khách hàng tương ứng</td>
             </tr>
           `;
           count.innerHTML = "Tổng số đang hiển thị: 0";
           return;
         }
 
-        tbody.innerHTML = "";
         count.innerHTML = "Tổng số đang hiển thị: " + data.length;
-        
-        data.forEach((item) => {
-          tbody.innerHTML += `
-            <tr>
-              <td>${item.fullName}</td>
-              <td>${item.phone}</td>
-              <td>${item.email}</td>
-              <td>${item.course}</td>
-              <td>
-                <span class="badge bg-primary">${item.status}</span>
-              </td>
-              <td>${item.note ?? ""}</td>
-              <td>
-                <button id="btn-tuvan-${item.id}" class="btn btn-sm btn-info">Tư vấn</button>
-                <button type="button" class="btn btn-sm btn-primary btn-edit" data-id="${item.id}">Cập nhật</button>
-                <button id="btn-dangky-${item.id}" class="btn btn-sm btn-success">Đăng ký</button>
-                <button id="btn-xoa-${item.id}" class="btn btn-sm btn-danger">Xóa</button>
-              </td>
-            </tr>
-          `;
+
+        const statusConfig = {
+          new: { text: "Khách mới", class: "bg-secondary" },
+          contacted: { text: "Đã tư vấn", class: "bg-warning text-dark" },
+          registered: { text: "Đã đăng ký", class: "bg-success" },
+        };
+
+        const htmlRows = data
+          .map((item) => {
+            const favoriteBadge = item.isFavorite
+              ? ' <span class="text-danger">❤️</span>'
+              : "";
+
+            const currentStatus = statusConfig[item.status] || {
+              text: item.status,
+              class: "bg-primary",
+            };
+
+            // --- THÊM LOGIC ĐIỀU KIỆN HIỂN THỊ NÚT BẤM TẠI ĐÂY ---
+            let actionButtons = "";
+
+            // Nếu là khách mới: Hiện nút Tư vấn + Đăng ký
+            if (item.status === "new") {
+              actionButtons += `<button class="btn btn-sm btn-info btn-status me-1" data-id="${item.id}" data-status="contacted">Tư vấn</button>`;
+              actionButtons += `<button class="btn btn-sm btn-success btn-status me-1" data-id="${item.id}" data-status="registered">Đăng ký</button>`;
+            }
+            // Nếu đã tư vấn: Chỉ hiện nút Đăng ký
+            else if (item.status === "contacted") {
+              actionButtons += `<button class="btn btn-sm btn-success btn-status me-1" data-id="${item.id}" data-status="registered">Đăng ký</button>`;
+            }
+            // (Nếu đã đăng ký 'registered', không nối thêm nút chuyển trạng thái nào cả)
+
+            // Các nút Cập nhật và Xóa thì luôn luôn hiện
+            actionButtons += `
+          <button type="button" class="btn btn-sm btn-primary btn-edit me-1" data-id="${item.id}">Cập nhật</button>
+          <button type="button" class="btn btn-sm btn-danger btn-delete" data-id="${item.id}">Xóa</button>
+        `;
+
+            return `
+    <tr>
+      <td>${item.fullName}${favoriteBadge}</td>
+      <td>${item.phone}</td>
+      <td>${item.email}</td>
+      <td>${item.course}</td>
+      <td>
+        <span class="badge ${currentStatus.class}">${currentStatus.text}</span>
+      </td>
+      <td>${item.note ?? ""}</td>
+      <td class="d-flex justify-content-end">
+        ${actionButtons}
+      </td>
+    </tr>
+  `;
+          })
+          .join("");
+
+        tbody.innerHTML = htmlRows;
+      }
+
+      function updateFilterButtonsUI() {
+        const buttons = document.querySelectorAll("#filterButtonGroup .btn");
+        buttons.forEach((btn) => {
+          const filterValue = btn.getAttribute("data-filter");
+          if (filterValue === currentFilter) {
+            btn.classList.remove(
+              "btn-outline-primary",
+              "btn-outline-secondary",
+              "btn-outline-warning",
+              "btn-outline-success",
+              "btn-outline-danger",
+            );
+            btn.classList.add("btn-primary");
+          } else {
+            btn.classList.remove("btn-primary");
+            if (filterValue === "all") btn.classList.add("btn-outline-primary");
+            if (filterValue === "new")
+              btn.classList.add("btn-outline-secondary");
+            if (filterValue === "contacted")
+              btn.classList.add("btn-outline-warning");
+            if (filterValue === "registered")
+              btn.classList.add("btn-outline-success");
+            if (filterValue === "favorite")
+              btn.classList.add("btn-outline-danger");
+          }
         });
       }
 
@@ -267,24 +572,24 @@
         clearErrors("#customerFormAdd");
 
         const form = document.getElementById("customerFormAdd");
-        const customer = {
+        const formData = {
           fullName: form.querySelector("#fullName").value.trim(),
           phone: form.querySelector("#phone").value.trim(),
           email: form.querySelector("#email").value.trim(),
           course: form.querySelector("#course").value.trim(),
-          status: "new",
-          favorite: true,
           note: form.querySelector("#note").value.trim(),
         };
 
-        const validationResult = validateCustomerForm(customer);
+        const validationResult = validateCustomerForm(formData);
         if (!validationResult.isValid) {
           showErrors("#customerFormAdd", validationResult.errors);
           return;
         }
 
+        const payload = createCustomerPayload(formData);
+
         try {
-          await createCustomer(customer);
+          await createCustomer(payload);
           customerModalAdd.hide();
           form.reset();
           await loadCustomers();
@@ -295,10 +600,9 @@
         }
       }
 
-      async function showEdit(id) {
+      async function showEditModal(id) {
         try {
           const customer = await getCustomer(id);
-          // ĐÃ SỬA: Trỏ chính xác vào thẻ form bên trong modal update
           const form = document.querySelector("#customerFormUpdate");
 
           form.querySelector("input[name='id']").value = customer.id;
@@ -308,6 +612,11 @@
           form.querySelector("#course").value = customer.course || "";
           form.querySelector("#note").value = customer.note || "";
 
+          form.querySelector("#status").value = customer.status || "new";
+          form.querySelector("#isFavorite").checked = Boolean(
+            customer.isFavorite,
+          );
+
           clearErrors("#customerFormUpdate");
           customerModalUpdate.show();
         } catch (error) {
@@ -316,7 +625,106 @@
         }
       }
 
-      // ĐÃ TỐI ƯU: Hàm hiển thị lỗi dùng chung cho cả 2 form thông qua formSelector
+      async function submitUpdateCustomer() {
+        clearErrors("#customerFormUpdate");
+        const form = document.getElementById("customerFormUpdate");
+        const id = form.querySelector("input[name='id']").value;
+
+        const formData = {
+          fullName: form.querySelector("#fullName").value.trim(),
+          phone: form.querySelector("#phone").value.trim(),
+          email: form.querySelector("#email").value.trim(),
+          course: form.querySelector("#course").value.trim(),
+          status: form.querySelector("#status").value,
+          isFavorite: form.querySelector("#isFavorite").checked,
+          note: form.querySelector("#note").value.trim(),
+        };
+
+        const validationResult = validateCustomerForm(formData);
+
+        if (!validationResult.isValid) {
+          showErrors("#customerFormUpdate", validationResult.errors);
+          return;
+        }
+
+        const payload = updateCustomerPayload(formData);
+
+        try {
+          await updateCustomer(id, payload);
+          customerModalUpdate.hide();
+          await loadCustomers();
+          alert("Cập nhật thông tin khách hàng thành công!");
+        } catch (error) {
+          console.error("Lỗi khi cập nhật khách hàng:", error);
+          alert("Có lỗi xảy ra khi cập nhật dữ liệu.");
+        }
+      }
+
+      async function showDeleteModal(id) {
+        try {
+          const customer = await getCustomer(id);
+          document.getElementById("deleteCustomerId").value = customer.id;
+          document.getElementById("deleteCustomerName").textContent =
+            customer.fullName || "Không rõ";
+          document.getElementById("deleteCustomerPhone").textContent =
+            customer.phone || "Không rõ";
+          customerModalDelete.show();
+        } catch (error) {
+          console.error("Lỗi khi lấy thông tin xóa:", error);
+          alert("Không thể tải thông tin chi tiết khách hàng để xóa!");
+        }
+      }
+
+      async function showStatusModal(id, status) {
+        try {
+          const customer = await getCustomer(id);
+          document.getElementById("statusCustomerId").value = customer.id;
+          document.getElementById("targetStatus").value = status;
+          document.getElementById("modal-status-title").textContent =
+            status === "contacted" ? "Xác nhận tư vấn" : "Xác nhận đăng ký";
+          document.getElementById("statusCustomerName").textContent =
+            customer.fullName || "Không rõ";
+          document.getElementById("statusCustomerPhone").textContent =
+            customer.phone || "Không rõ";
+          customerModalStatus.show();
+        } catch (error) {
+          console.error("Lỗi khi lấy thông tin trạng thái:", error);
+          alert("Không thể tải thông tin chi tiết khách hàng!");
+        }
+      }
+
+      async function confirmDeleteCustomer() {
+        const id = document.getElementById("deleteCustomerId").value;
+        if (!id) return;
+
+        try {
+          await deleteCustomer(id);
+          customerModalDelete.hide();
+          await loadCustomers();
+          alert("Xóa khách hàng thành công!");
+        } catch (error) {
+          console.error("Lỗi khi xóa khách hàng:", error);
+          alert("Có lỗi xảy ra khi xóa dữ liệu.");
+        }
+      }
+
+      async function confirmStatusUpdate() {
+        const id = document.getElementById("statusCustomerId").value;
+        const status = document.getElementById("targetStatus").value;
+        if (!id || !status) return;
+
+        try {
+          await patchCustomerStatus(id, status);
+
+          customerModalStatus.hide();
+          await loadCustomers();
+          alert("Cập nhật trạng thái thành công!");
+        } catch (error) {
+          console.error("Lỗi khi cập nhật trạng thái:", error);
+          alert("Có lỗi xảy ra khi cập nhật trạng thái.");
+        }
+      }
+
       function showErrors(formSelector, errors) {
         const form = document.querySelector(formSelector);
         Object.entries(errors).forEach(([field, message]) => {
@@ -329,12 +737,24 @@
           }
         });
       }
+      function updateDashboard() {
+        const countNew = customers.filter((c) => c.status === "new").length;
+        const countContacted = customers.filter(
+          (c) => c.status === "contacted",
+        ).length;
+        const countRegistered = customers.filter(
+          (c) => c.status === "registered",
+        ).length;
 
-      // ĐÃ TỐI ƯU: Hàm xóa lỗi dùng chung
+        document.getElementById("stat-new").textContent = countNew;
+        document.getElementById("stat-contacted").textContent = countContacted;
+        document.getElementById("stat-registered").textContent =
+          countRegistered;
+      }
       function clearErrors(formSelector) {
         const form = document.querySelector(formSelector);
         if (!form) return;
-        
+
         const inputs = form.querySelectorAll(".form-control, .form-select");
         inputs.forEach((input) => {
           input.classList.remove("is-invalid");
@@ -348,16 +768,54 @@
       document.addEventListener("DOMContentLoaded", () => {
         loadCustomers();
 
-        // Gắn sự kiện click vào nút Lưu (Thêm mới)
-        document.getElementById("btn-save-customer").addEventListener("click", addCustomer);
+        document
+          .getElementById("btn-save-customer")
+          .addEventListener("click", addCustomer);
+        document
+          .getElementById("btn-update-customer")
+          .addEventListener("click", submitUpdateCustomer);
+        document
+          .getElementById("btn-confirm-delete")
+          .addEventListener("click", confirmDeleteCustomer);
+        document
+          .getElementById("btn-confirm-status")
+          .addEventListener("click", confirmStatusUpdate);
 
-        // ĐÃ BỔ SUNG: Lắng nghe sự kiện click nút Cập nhật trên bảng dữ liệu
-        document.getElementById("customerTableBody").addEventListener("click", (event) => {
-          if (event.target.classList.contains("btn-edit")) {
+        document
+          .getElementById("searchInput")
+          .addEventListener("input", (event) => {
+            currentKeyword = event.target.value;
+            renderCustomers();
+          });
+
+        document
+          .getElementById("filterButtonGroup")
+          .addEventListener("click", (event) => {
+            if (event.target.tagName === "BUTTON") {
+              currentFilter = event.target.getAttribute("data-filter");
+              updateFilterButtonsUI();
+              renderCustomers();
+            }
+          });
+
+        document
+          .getElementById("customerTableBody")
+          .addEventListener("click", (event) => {
             const id = event.target.getAttribute("data-id");
-            showEdit(id);
-          }
-        });
+
+            if (event.target.classList.contains("btn-edit")) {
+              showEditModal(id);
+            }
+
+            if (event.target.classList.contains("btn-delete")) {
+              showDeleteModal(id);
+            }
+
+            if (event.target.classList.contains("btn-status")) {
+              const status = event.target.getAttribute("data-status");
+              showStatusModal(id, status);
+            }
+          });
       });
     </script>
   </body>
