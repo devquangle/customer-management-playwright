@@ -1,0 +1,2145 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\playwright.config.js",
+    "rootDir": "D:/TESTER_CICD_CP26SCM02/customer-management-playwright/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/TESTER_CICD_CP26SCM02/customer-management-playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/TESTER_CICD_CP26SCM02/customer-management-playwright/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npx http-server -p 5500 -c-1",
+      "port": 5500,
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "customer.e2e.spec.js",
+      "file": "customer.e2e.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "CRM Dashboard E2E Tests - Giao diện & Thống kê ban đầu (Group 1)",
+          "file": "customer.e2e.spec.js",
+          "line": 126,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-001: Hien thi tieu de va phu de dashboard chinh xac",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5385,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:24.217Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-31930--phu-de-dashboard-chinh-xac\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-31930--phu-de-dashboard-chinh-xac\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-31930--phu-de-dashboard-chinh-xac\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-7c6316d73a16ee586700",
+              "file": "customer.e2e.spec.js",
+              "line": 128,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-002: Thong ke so luong 'Khach moi' chinh xac",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3406,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:29.863Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-80386-o-luong-Khach-moi-chinh-xac\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-80386-o-luong-Khach-moi-chinh-xac\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-80386-o-luong-Khach-moi-chinh-xac\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-8c2863072184bd477ee8",
+              "file": "customer.e2e.spec.js",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-003: Thong ke so luong 'Da tu van' chinh xac",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2401,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:33.365Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-18d58-o-luong-Da-tu-van-chinh-xac\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-18d58-o-luong-Da-tu-van-chinh-xac\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-18d58-o-luong-Da-tu-van-chinh-xac\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-7babb06cdbb1d61636c3",
+              "file": "customer.e2e.spec.js",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-004: Thong ke so luong 'Da dang ky' chinh xac",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2163,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:35.863Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-f24ab--luong-Da-dang-ky-chinh-xac\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-f24ab--luong-Da-dang-ky-chinh-xac\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-f24ab--luong-Da-dang-ky-chinh-xac\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-0115e4bc98fab9bb90bc",
+              "file": "customer.e2e.spec.js",
+              "line": 146,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-005: Hien thi bang khach hang voi dung 7 cot tieu de",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2718,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:38.108Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-b9ea6-hang-voi-dung-7-cot-tieu-de\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-b9ea6-hang-voi-dung-7-cot-tieu-de\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-b9ea6-hang-voi-dung-7-cot-tieu-de\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-19d74fc1dd268f1977c2",
+              "file": "customer.e2e.spec.js",
+              "line": 151,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-006: Hien thi so luong tong chinh xac",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2544,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:40.922Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-5362d-thi-so-luong-tong-chinh-xac\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-5362d-thi-so-luong-tong-chinh-xac\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-5362d-thi-so-luong-tong-chinh-xac\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-b6bffdc5cb120477129a",
+              "file": "customer.e2e.spec.js",
+              "line": 161,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "CRM Dashboard E2E Tests - Tìm kiếm & Bộ lọc (Group 2)",
+          "file": "customer.e2e.spec.js",
+          "line": 166,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-007: Tim kiem khach hang theo ten (co ket qua phu hop)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2664,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:43.554Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-3679a-heo-ten-co-ket-qua-phu-hop-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-3679a-heo-ten-co-ket-qua-phu-hop-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-3679a-heo-ten-co-ket-qua-phu-hop-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-511084c82c3b5416f61c",
+              "file": "customer.e2e.spec.js",
+              "line": 168,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-008: Tim kiem khach hang theo so dien thoai (co ket qua phu hop)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2456,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:46.317Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-a6df9-n-thoai-co-ket-qua-phu-hop-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-a6df9-n-thoai-co-ket-qua-phu-hop-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-a6df9-n-thoai-co-ket-qua-phu-hop-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-9729e6dbb629996b4021",
+              "file": "customer.e2e.spec.js",
+              "line": 177,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-009: Tim kiem khach hang theo email (co ket qua phu hop)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2319,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:48.876Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-dc845-o-email-co-ket-qua-phu-hop-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-dc845-o-email-co-ket-qua-phu-hop-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-dc845-o-email-co-ket-qua-phu-hop-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-2ac07ed020eb48d3b074",
+              "file": "customer.e2e.spec.js",
+              "line": 186,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-010: Tim kiem khong tim thay ket qua nao (hien thi thong bao trong)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2597,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:51.287Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-4d009-o-hien-thi-thong-bao-trong-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-4d009-o-hien-thi-thong-bao-trong-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-4d009-o-hien-thi-thong-bao-trong-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-87422965305aa6b1974b",
+              "file": "customer.e2e.spec.js",
+              "line": 195,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-011: Loc khach hang theo trang thai 'Moi'",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2063,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:53.987Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8fe44-h-hang-theo-trang-thai-Moi-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8fe44-h-hang-theo-trang-thai-Moi-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8fe44-h-hang-theo-trang-thai-Moi-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-76d9894ca04f9287cceb",
+              "file": "customer.e2e.spec.js",
+              "line": 204,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-012: Loc khach hang theo trang thai 'Tu van'",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2184,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:56.143Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-1e948-ang-theo-trang-thai-Tu-van-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-1e948-ang-theo-trang-thai-Tu-van-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-1e948-ang-theo-trang-thai-Tu-van-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-97078e93f3e637696cd0",
+              "file": "customer.e2e.spec.js",
+              "line": 212,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-013: Loc khach hang theo trang thai 'Dang ky'",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2554,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:46:58.440Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ad94f-ng-theo-trang-thai-Dang-ky-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ad94f-ng-theo-trang-thai-Dang-ky-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ad94f-ng-theo-trang-thai-Dang-ky-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-960aa05e5be1eca6e349",
+              "file": "customer.e2e.spec.js",
+              "line": 220,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-014: Loc khach hang theo danh sach 'Yeu thich'",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2609,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:01.087Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-96670-g-theo-danh-sach-Yeu-thich-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-96670-g-theo-danh-sach-Yeu-thich-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-96670-g-theo-danh-sach-Yeu-thich-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-a4d4c58d77d5eec37836",
+              "file": "customer.e2e.spec.js",
+              "line": 228,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "CRM Dashboard E2E Tests - Thêm mới học viên & Validation (Group 3)",
+          "file": "customer.e2e.spec.js",
+          "line": 236,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-015: Mo Modal Them moi va kiem tra su hien dien cua cac truong bat buoc (*)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2494,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:03.806Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-acd17-en-cua-cac-truong-bat-buoc-\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-acd17-en-cua-cac-truong-bat-buoc-\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-acd17-en-cua-cac-truong-bat-buoc-\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-a5ef43d0b2cb733ae69b",
+              "file": "customer.e2e.spec.js",
+              "line": 245,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-016: Reset form va xoa cac loi validation khi dong Modal Them moi",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3482,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:06.407Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-60d26-ion-khi-dong-Modal-Them-moi\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-60d26-ion-khi-dong-Modal-Them-moi\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-60d26-ion-khi-dong-Modal-Them-moi\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-b32975ca22d5d83cb2c9",
+              "file": "customer.e2e.spec.js",
+              "line": 251,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-017: Bao loi 'Ho ten khong duoc rong' khi khong nhap Ho ten",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2929,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:10.045Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-60312--rong-khi-khong-nhap-Ho-ten\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-60312--rong-khi-khong-nhap-Ho-ten\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-60312--rong-khi-khong-nhap-Ho-ten\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-d4e51c1d60dc7cc64959",
+              "file": "customer.e2e.spec.js",
+              "line": 266,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-018: Bao loi 'Ho ten phai co toi thieu 3 ky tu' khi nhap Ho ten qua ngan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2742,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:13.112Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-308b8-tu-khi-nhap-Ho-ten-qua-ngan\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-308b8-tu-khi-nhap-Ho-ten-qua-ngan\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-308b8-tu-khi-nhap-Ho-ten-qua-ngan\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-3e9f8e6693a47da5cd9b",
+              "file": "customer.e2e.spec.js",
+              "line": 279,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-019: Bao loi 'So dien thoai khong duoc rong' khi de trong So dien thoai",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3503,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:15.973Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8a945--khi-de-trong-So-dien-thoai\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8a945--khi-de-trong-So-dien-thoai\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8a945--khi-de-trong-So-dien-thoai\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-ea7b35126a2d091c7eeb",
+              "file": "customer.e2e.spec.js",
+              "line": 293,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-020: Bao loi 'So dien thoai chi duoc chua so' khi nhap ky tu chu vao So dien thoai",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2249,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:19.588Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ab65f-ky-tu-chu-vao-So-dien-thoai\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ab65f-ky-tu-chu-vao-So-dien-thoai\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ab65f-ky-tu-chu-vao-So-dien-thoai\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-5c18583750b73fc19d1f",
+              "file": "customer.e2e.spec.js",
+              "line": 306,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-021: Bao loi 'So dien thoai phai co do dai tu 9 den 11 ky tu' khi nhap do dai khong hop le",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2397,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:21.943Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-fc25d-hi-nhap-do-dai-khong-hop-le\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-fc25d-hi-nhap-do-dai-khong-hop-le\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-fc25d-hi-nhap-do-dai-khong-hop-le\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-8c3cdd77b1b78f3b903a",
+              "file": "customer.e2e.spec.js",
+              "line": 320,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-022: Bao loi 'Email khong duoc rong' khi de trong Email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2454,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:24.463Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-99a30-uoc-rong-khi-de-trong-Email\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-99a30-uoc-rong-khi-de-trong-Email\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-99a30-uoc-rong-khi-de-trong-Email\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-f3fbca1998e79260b65d",
+              "file": "customer.e2e.spec.js",
+              "line": 334,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "CRM Dashboard E2E Tests - Thêm mới học viên thành công & Định dạng dữ liệu (Group 4)",
+          "file": "customer.e2e.spec.js",
+          "line": 347,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-023: Bao loi 'Email khong dung dinh dang' khi nhap email sai cu phap",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2555,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:27.026Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-6284c--khi-nhap-email-sai-cu-phap\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-6284c--khi-nhap-email-sai-cu-phap\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-6284c--khi-nhap-email-sai-cu-phap\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-8dff77c0499e3cd48f63",
+              "file": "customer.e2e.spec.js",
+              "line": 356,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-024: Bao loi 'Khoa hoc quan tam khong duoc rong' khi de trong Khoa hoc",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2426,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:29.691Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-9978d--rong-khi-de-trong-Khoa-hoc\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-9978d--rong-khi-de-trong-Khoa-hoc\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-9978d--rong-khi-de-trong-Khoa-hoc\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-e03f9fc5818c746372cd",
+              "file": "customer.e2e.spec.js",
+              "line": 370,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-025: Them moi khach hang thanh cong voi day du thong tin hop le",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2734,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:32.223Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-70775-voi-day-du-thong-tin-hop-le\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-70775-voi-day-du-thong-tin-hop-le\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-70775-voi-day-du-thong-tin-hop-le\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-3b1524d9ad276f9b8883",
+              "file": "customer.e2e.spec.js",
+              "line": 383,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-026: Khach hang moi them thanh cong tu dong dung o dong dau tien",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2636,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:35.079Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8438d-u-dong-dung-o-dong-dau-tien\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8438d-u-dong-dung-o-dong-dau-tien\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-8438d-u-dong-dung-o-dong-dau-tien\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-5638b007c13e10a784e1",
+              "file": "customer.e2e.spec.js",
+              "line": 394,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "CRM Dashboard E2E Tests - Cập nhật học viên & Validation (Group 5)",
+          "file": "customer.e2e.spec.js",
+          "line": 410,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-027: Mo Modal Cap nhat va kiem tra du lieu hien tai duoc dien san chinh xac",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2759,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:37.839Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-abf17-tai-duoc-dien-san-chinh-xac\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-abf17-tai-duoc-dien-san-chinh-xac\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-abf17-tai-duoc-dien-san-chinh-xac\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-eac322512729f0a3a4dd",
+              "file": "customer.e2e.spec.js",
+              "line": 412,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-028: Reset form va xoa cac loi validation khi dong Modal Cap nhat",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3821,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:40.701Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-4e8ee-ion-khi-dong-Modal-Cap-nhat\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-4e8ee-ion-khi-dong-Modal-Cap-nhat\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-4e8ee-ion-khi-dong-Modal-Cap-nhat\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-825092d695724788b34e",
+              "file": "customer.e2e.spec.js",
+              "line": 425,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-029: Bao loi 'Ho ten khong duoc rong' khi cap nhat Ho ten thanh rong",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2556,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:44.721Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-90d7d--cap-nhat-Ho-ten-thanh-rong\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-90d7d--cap-nhat-Ho-ten-thanh-rong\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-90d7d--cap-nhat-Ho-ten-thanh-rong\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-add9a97baa86a72471fd",
+              "file": "customer.e2e.spec.js",
+              "line": 447,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-030: Bao loi 'Ho ten phai co toi thieu 3 ky tu' khi cap nhat Ho ten qua ngan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2732,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:47.387Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-6debc-hi-cap-nhat-Ho-ten-qua-ngan\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-6debc-hi-cap-nhat-Ho-ten-qua-ngan\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-6debc-hi-cap-nhat-Ho-ten-qua-ngan\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-815e1a76d39abb7fc128",
+              "file": "customer.e2e.spec.js",
+              "line": 463,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-031: Bao loi 'So dien thoai khong duoc rong' khi cap nhat So dien thoai thanh rong",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2659,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:50.245Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-a6f2e-at-So-dien-thoai-thanh-rong\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-a6f2e-at-So-dien-thoai-thanh-rong\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-a6f2e-at-So-dien-thoai-thanh-rong\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-65045108daa3222dacd9",
+              "file": "customer.e2e.spec.js",
+              "line": 479,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-032: Bao loi 'So dien thoai chi duoc chua so' khi nhap chu vao So dien thoai khi cap nhat",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2556,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:53.028Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-37abe--So-dien-thoai-khi-cap-nhat\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-37abe--So-dien-thoai-khi-cap-nhat\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-37abe--So-dien-thoai-khi-cap-nhat\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-0e69def474fba4ce9399",
+              "file": "customer.e2e.spec.js",
+              "line": 495,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-033: Bao loi 'So dien thoai phai co do dai tu 9 den 11 ky tu' khi nhap sai do dai SDT luc cap nhat",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2807,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:55.742Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-00cf4-sai-do-dai-SDT-luc-cap-nhat\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-00cf4-sai-do-dai-SDT-luc-cap-nhat\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-00cf4-sai-do-dai-SDT-luc-cap-nhat\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-d731d8b9e0bba821ea5e",
+              "file": "customer.e2e.spec.js",
+              "line": 511,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-034: Bao loi 'Email khong duoc rong' khi cap nhat Email thanh rong",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3036,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:47:58.702Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-d8017-i-cap-nhat-Email-thanh-rong\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-d8017-i-cap-nhat-Email-thanh-rong\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-d8017-i-cap-nhat-Email-thanh-rong\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-d8ba720b250da9e40f24",
+              "file": "customer.e2e.spec.js",
+              "line": 527,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "CRM Dashboard E2E Tests - Cập nhật thành công & Trạng thái/Xóa (Group 6)",
+          "file": "customer.e2e.spec.js",
+          "line": 543,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-035: Bao loi 'Email khong dung dinh dang' khi cap nhat Email sai dinh dang",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2672,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:48:01.874Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ee39b-ap-nhat-Email-sai-dinh-dang\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ee39b-ap-nhat-Email-sai-dinh-dang\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ee39b-ap-nhat-Email-sai-dinh-dang\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-718003074fe322645d66",
+              "file": "customer.e2e.spec.js",
+              "line": 545,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-036: Cap nhat thong tin khach hang thanh cong",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3112,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:48:04.664Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ef444-g-tin-khach-hang-thanh-cong\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ef444-g-tin-khach-hang-thanh-cong\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-ef444-g-tin-khach-hang-thanh-cong\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-9decb8b06f1d0bae2bc4",
+              "file": "customer.e2e.spec.js",
+              "line": 561,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-037: Quy trinh doi trang thai tu Moi sang Tu van",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2630,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:48:07.926Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-f00a9-ang-thai-tu-Moi-sang-Tu-van\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-f00a9-ang-thai-tu-Moi-sang-Tu-van\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-f00a9-ang-thai-tu-Moi-sang-Tu-van\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-d2546756a3504bdb928b",
+              "file": "customer.e2e.spec.js",
+              "line": 580,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-038: Huy bo viec cap nhat trang thai trong Modal Xac nhan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2760,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:48:10.694Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-48ab5-g-thai-trong-Modal-Xac-nhan\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-48ab5-g-thai-trong-Modal-Xac-nhan\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-48ab5-g-thai-trong-Modal-Xac-nhan\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-dcb50d2cb133437a03c4",
+              "file": "customer.e2e.spec.js",
+              "line": 593,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-039: Quy trinh doi trang thai tu Tu van sang Dang ky",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2837,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:48:13.601Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-184ae-thai-tu-Tu-van-sang-Dang-ky\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-184ae-thai-tu-Tu-van-sang-Dang-ky\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-184ae-thai-tu-Tu-van-sang-Dang-ky\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-e20bc81493525cffafcf",
+              "file": "customer.e2e.spec.js",
+              "line": 606,
+              "column": 7
+            },
+            {
+              "title": "TC-E2E-040: Quy trinh xoa hoc vien",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2943,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-24T08:48:16.575Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-3dd69--040-Quy-trinh-xoa-hoc-vien\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-3dd69--040-Quy-trinh-xoa-hoc-vien\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\TESTER_CICD_CP26SCM02\\customer-management-playwright\\test-results\\customer.e2e-CRM-Dashboard-3dd69--040-Quy-trinh-xoa-hoc-vien\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13b1e3092db64c3fd44a-ad4c940b9a91fc7de9fc",
+              "file": "customer.e2e.spec.js",
+              "line": 619,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-24T08:46:23.513Z",
+    "duration": 116393.85399999999,
+    "expected": 40,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
