@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <body class="bg-light">
@@ -47,6 +48,14 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        id="messageError"
+        class="alert d-none align-items-center mb-3"
+        role="alert"
+      >
+        <div id="messageText"></div>
       </div>
 
       <div class="card shadow-sm">
@@ -421,18 +430,6 @@
         searchCustomers,
       } from "./src/customerBusiness.js";
 
-      function updateCustomerPayload(formData) {
-        return {
-          fullName: String(formData.fullName ?? "").trim(),
-          phone: String(formData.phone ?? "").trim(),
-          email: String(formData.email ?? "").trim(),
-          course: String(formData.course ?? "").trim(),
-          status: String(formData.status ?? "new").trim(),
-          isFavorite: Boolean(formData.isFavorite),
-          note: String(formData.note ?? "").trim(),
-        };
-      }
-
       let customers = [];
       let currentFilter = "all";
       let currentKeyword = "";
@@ -450,12 +447,53 @@
         document.getElementById("customerModalStatus"),
       );
 
+      // --- HÀM THÊM MỚI ---
+      function escapeHTML(str) {
+        if (!str) return "";
+        return str.toString().replace(
+          /[&<>'"]/g,
+          (tag) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "'": "&#39;",
+              '"': "&quot;",
+            })[tag] || tag,
+        );
+      }
+
+      function showNotification(message, type = "success") {
+        // SweetAlert2 dùng 'error' thay vì 'danger' của Bootstrap
+        const swalType = type === "danger" ? "error" : type;
+
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end", // Hiển thị ở góc trên bên phải
+          showConfirmButton: false, // Ẩn nút OK
+          timer: 5000, // Tự động đóng sau 3 giây
+          timerProgressBar: true, // Hiện thanh thời gian chạy
+          didOpen: (toast) => {
+            // Dừng đếm thời gian khi di chuột vào thông báo
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+
+        Toast.fire({
+          icon: swalType,
+          title: message,
+        });
+      }
+      // --------------------
+
       async function loadCustomers() {
         try {
           customers = await fetchCustomers();
           renderCustomers();
         } catch (error) {
           console.error("Lỗi khi tải danh sách khách hàng:", error);
+          showNotification("Không thể tải danh sách khách hàng.", "danger");
         }
       }
 
@@ -499,36 +537,31 @@
               class: "bg-primary",
             };
 
-            // --- THÊM LOGIC ĐIỀU KIỆN HIỂN THỊ NÚT BẤM TẠI ĐÂY ---
             let actionButtons = "";
 
-            // Nếu là khách mới: Hiện nút Tư vấn + Đăng ký
             if (item.status === "new") {
               actionButtons += `<button class="btn btn-sm btn-info btn-status me-1" data-id="${item.id}" data-status="contacted">Tư vấn</button>`;
               actionButtons += `<button class="btn btn-sm btn-success btn-status me-1" data-id="${item.id}" data-status="registered">Đăng ký</button>`;
-            }
-            // Nếu đã tư vấn: Chỉ hiện nút Đăng ký
-            else if (item.status === "contacted") {
+            } else if (item.status === "contacted") {
               actionButtons += `<button class="btn btn-sm btn-success btn-status me-1" data-id="${item.id}" data-status="registered">Đăng ký</button>`;
             }
-            // (Nếu đã đăng ký 'registered', không nối thêm nút chuyển trạng thái nào cả)
 
-            // Các nút Cập nhật và Xóa thì luôn luôn hiện
             actionButtons += `
           <button type="button" class="btn btn-sm btn-primary btn-edit me-1" data-id="${item.id}">Cập nhật</button>
           <button type="button" class="btn btn-sm btn-danger btn-delete" data-id="${item.id}">Xóa</button>
         `;
 
+            // Áp dụng escapeHTML để chống XSS
             return `
     <tr>
-      <td>${item.fullName}${favoriteBadge}</td>
-      <td>${item.phone}</td>
-      <td>${item.email}</td>
-      <td>${item.course}</td>
+      <td>${escapeHTML(item.fullName)}${favoriteBadge}</td>
+      <td>${escapeHTML(item.phone)}</td>
+      <td>${escapeHTML(item.email)}</td>
+      <td>${escapeHTML(item.course)}</td>
       <td>
         <span class="badge ${currentStatus.class}">${currentStatus.text}</span>
       </td>
-      <td>${item.note ?? ""}</td>
+      <td>${escapeHTML(item.note ?? "")}</td>
       <td class="d-flex justify-content-end">
         ${actionButtons}
       </td>
@@ -593,10 +626,10 @@
           customerModalAdd.hide();
           form.reset();
           await loadCustomers();
-          alert("Thêm khách hàng thành công!");
+          showNotification("Thêm khách hàng thành công!", "success");
         } catch (error) {
           console.error("Lỗi khi thêm khách hàng:", error);
-          alert("Có lỗi xảy ra khi lưu dữ liệu.");
+          showNotification("Có lỗi xảy ra khi lưu dữ liệu.", "danger");
         }
       }
 
@@ -621,7 +654,10 @@
           customerModalUpdate.show();
         } catch (error) {
           console.error("Lỗi khi tải thông tin khách hàng:", error);
-          alert("Không thể lấy dữ liệu khách hàng để chỉnh sửa!");
+          showNotification(
+            "Không thể lấy dữ liệu khách hàng để chỉnh sửa!",
+            "danger",
+          );
         }
       }
 
@@ -653,10 +689,13 @@
           await updateCustomer(id, payload);
           customerModalUpdate.hide();
           await loadCustomers();
-          alert("Cập nhật thông tin khách hàng thành công!");
+          showNotification(
+            "Cập nhật thông tin khách hàng thành công!",
+            "success",
+          );
         } catch (error) {
           console.error("Lỗi khi cập nhật khách hàng:", error);
-          alert("Có lỗi xảy ra khi cập nhật dữ liệu.");
+          showNotification("Có lỗi xảy ra khi cập nhật dữ liệu.", "danger");
         }
       }
 
@@ -671,7 +710,10 @@
           customerModalDelete.show();
         } catch (error) {
           console.error("Lỗi khi lấy thông tin xóa:", error);
-          alert("Không thể tải thông tin chi tiết khách hàng để xóa!");
+          showNotification(
+            "Không thể tải thông tin chi tiết khách hàng để xóa!",
+            "danger",
+          );
         }
       }
 
@@ -689,7 +731,10 @@
           customerModalStatus.show();
         } catch (error) {
           console.error("Lỗi khi lấy thông tin trạng thái:", error);
-          alert("Không thể tải thông tin chi tiết khách hàng!");
+          showNotification(
+            "Không thể tải thông tin chi tiết khách hàng!",
+            "danger",
+          );
         }
       }
 
@@ -701,10 +746,10 @@
           await deleteCustomer(id);
           customerModalDelete.hide();
           await loadCustomers();
-          alert("Xóa khách hàng thành công!");
+          showNotification("Xóa khách hàng thành công!", "success");
         } catch (error) {
           console.error("Lỗi khi xóa khách hàng:", error);
-          alert("Có lỗi xảy ra khi xóa dữ liệu.");
+          showNotification("Có lỗi xảy ra khi xóa dữ liệu.", "danger");
         }
       }
 
@@ -718,10 +763,10 @@
 
           customerModalStatus.hide();
           await loadCustomers();
-          alert("Cập nhật trạng thái thành công!");
+          showNotification("Cập nhật trạng thái thành công!", "success");
         } catch (error) {
           console.error("Lỗi khi cập nhật trạng thái:", error);
-          alert("Có lỗi xảy ra khi cập nhật trạng thái.");
+          showNotification("Có lỗi xảy ra khi cập nhật trạng thái.", "danger");
         }
       }
 
@@ -737,6 +782,7 @@
           }
         });
       }
+
       function updateDashboard() {
         const countNew = customers.filter((c) => c.status === "new").length;
         const countContacted = customers.filter(
@@ -751,6 +797,7 @@
         document.getElementById("stat-registered").textContent =
           countRegistered;
       }
+
       function clearErrors(formSelector) {
         const form = document.querySelector(formSelector);
         if (!form) return;
