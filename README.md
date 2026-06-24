@@ -8,41 +8,52 @@
 
 ### 🖥️ Màn hình chính (Dashboard)
 
-![Dashboard Preview](dashboard_preview.png)### ➕ Thêm mới học viên
+![Dashboard Preview](assets/image/dashboard_preview.png)
 
-![Add Customer](preview_add.png)### ✏️ Cập nhật thông tin học viên
+### ➕ Thêm mới học viên
 
-![Edit Customer](preview_edit.png)### 🗑️ Xác nhận xóa học viên
+![Add Customer](assets/image/preview_add.png)
 
-![Delete Confirmation](preview_delete.png)### 🔍 Tìm kiếm & Bộ lọc nâng cao
+### ✏️ Cập nhật thông tin học viên
+
+![Edit Customer](assets/image/preview_edit.png)
+
+### 🗑️ Xác nhận xóa học viên
+
+![Delete Confirmation](assets/image/preview_delete.png)
+
+### 🔍 Tìm kiếm & Bộ lọc nâng cao
 
 Hệ thống hỗ trợ tìm kiếm tức thời và bộ lọc động với 5 chế độ hiển thị chuyên nghiệp:
 
 - **Bộ lọc: Tất cả học viên**
 
-  ![Tất cả học viên](preview_filter_all.png)
+  ![Tất cả học viên](assets/image/preview_filter_all.png)
 
 - **Bộ lọc: Khách mới (New)**
 
-  ![Khách mới](preview_filter_new.png)
+  ![Khách mới](assets/image/preview_filter_new.png)
 
 - **Bộ lọc: Đã tư vấn (Contacted)**
 
-  ![Đã tư vấn](preview_filter_contacted.png)
+  ![Đã tư vấn](assets/image/preview_filter_contacted.png)
 
 - **Bộ lọc: Đã đăng ký (Registered)**
 
-  ![Đã đăng ký](preview_filter_registered.png)
+  ![Đã đăng ký](assets/image/preview_filter_registered.png)
 
 - **Bộ lọc: Yêu thích (Favorite)**
 
-  ![Yêu thích](preview_filter_favorite.png)
+  ![Yêu thích](assets/image/preview_filter_favorite.png)
 
 ### 📞 Xác nhận chuyển đổi trạng thái "Tư vấn"
 
-![Xác nhận tư vấn](preview_status_contacted.png)### 🎓 Xác nhận chuyển đổi trạng thái "Đăng ký"
+![Xác nhận tư vấn](assets/image/preview_status_contacted.png)
 
-![Xác nhận đăng ký](preview_status_registered.png)---
+### 🎓 Xác nhận chuyển đổi trạng thái "Đăng ký"
+
+![Xác nhận đăng ký](assets/image/preview_status_registered.png)
+---
 
 ## 🚀 Giới thiệu dự án
 
