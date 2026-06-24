@@ -1,23 +1,13 @@
 {
   "customers": [
     {
-      "fullName": "Lê Minh Cường",
-      "phone": "0909123456",
-      "email": "cuong@gmail.com",
-      "course": "JavaScript cơ bản",
-      "note": "Đã đăng ký học cuối tuần",
-      "status": "contacted",
-      "isFavorite": true,
-      "id": "3"
-    },
-    {
       "fullName": "Anna Smith T",
       "phone": "0000000009",
       "email": "anna@gmail.com",
       "course": "java",
-      "status": "new",
-      "isFavorite": true,
       "note": "aâ",
+      "status": "contacted",
+      "isFavorite": true,
       "id": "w7HSoXv"
     },
     {
@@ -28,27 +18,30 @@
       "note": "sssss",
       "status": "registered",
       "isFavorite": false,
-      "id": "7rrwe7a"
+      "id": "7rrwe7a",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Nguyen Van A",
       "phone": "0766938732",
       "email": "quangglee0000@gmail.com",
       "course": "ssss",
-      "status": "new",
-      "favorite": true,
+      "status": "contacted",
+      "isFavorite": true,
       "note": "sss",
-      "id": "2LB01IM"
+      "id": "2LB01IM",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Lê Minh Cường",
       "phone": "0909123456",
       "email": "cuong@gmail.com",
       "course": "JavaScript cơ bản",
-      "status": "new",
+      "status": "registered",
       "isFavorite": false,
       "note": "",
-      "id": "_eBPeCb"
+      "id": "_eBPeCb",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Lê Minh Cường",
@@ -58,7 +51,8 @@
       "note": "hoc tester",
       "status": "new",
       "isFavorite": false,
-      "id": "eu4zfo7"
+      "id": "eu4zfo7",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Lê Minh Cường",
@@ -68,7 +62,8 @@
       "note": "yyyyyyyyyyyy",
       "status": "new",
       "isFavorite": false,
-      "id": "8GsgbqB"
+      "id": "8GsgbqB",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Lê Minh Cường",
@@ -78,7 +73,8 @@
       "note": "ssssss",
       "status": "new",
       "isFavorite": false,
-      "id": "T1Uq1Qh"
+      "id": "T1Uq1Qh",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Lê Minh Cường",
@@ -88,7 +84,8 @@
       "note": "ss",
       "status": "new",
       "isFavorite": false,
-      "id": "OzIMWsp"
+      "id": "OzIMWsp",
+      "createdAt": "2026-06-24T13:00:00Z"
     },
     {
       "fullName": "Anna Smith T",
@@ -98,7 +95,19 @@
       "note": "ssss",
       "status": "new",
       "isFavorite": false,
-      "id": "EfpdqOK"
+      "id": "EfpdqOK",
+      "createdAt": "2026-06-24T13:00:00Z"
+    },
+    {
+      "fullName": "ddd",
+      "phone": "0909123456",
+      "email": "cuong@gmail.com",
+      "course": "JavaScript cơ bản",
+      "note": "ad",
+      "status": "new",
+      "isFavorite": false,
+      "id": "npxlDFB",
+      "createdAt": "2026-06-24T13:00:00Z"
     }
   ]
 }

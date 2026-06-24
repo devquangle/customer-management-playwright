@@ -23,10 +23,11 @@ export function validateCustomerForm(formData) {
   }
 
   // 3. Validate Email (ĐÃ SỬA LỖI Ở ĐÂY)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
-    errors.email = "Email không được rỗng"; // Trước đó bạn viết nhầm là errors.phone
-  } else if (!email.includes("@")) {
-    errors.email = "Email phải có ký tự @";
+    errors.email = "Email không được rỗng";
+  } else if (!emailRegex.test(email)) {
+    errors.email = "Email không đúng định dạng (VD: name@example.com)";
   }
 
   // 4. Validate Khóa học
@@ -55,6 +56,7 @@ export function createCustomerPayload(formData) {
     ...getBasePayload(formData),
     status: "new",
     isFavorite: false,
+    createdAt: new Date().toISOString(),
   };
 }
 
@@ -62,7 +64,7 @@ export function updateCustomerPayload(formData) {
   return {
     ...getBasePayload(formData),
     status: String(formData.status ?? "new").trim(),
-    isFavorite: Boolean(formData.isFavorite), // Ép kiểu Boolean cho an toàn
+    isFavorite: Boolean(formData.isFavorite),
   };
 }
 
